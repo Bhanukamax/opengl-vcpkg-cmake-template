@@ -10,7 +10,8 @@ project(Tutorial VERSION 1.0)
 # Finding packages
 # these are from vcpkg
 find_package(glfw3 CONFIG REQUIRED)
-find_package(OpenGL REQUIRED)
+#find_package(OpenGL REQUIRED)
+find_package(GLEW REQUIRED)
 
 # add the executable
 add_executable(Tutorial src/test.cpp)
@@ -18,6 +19,12 @@ add_executable(Tutorial src/test.cpp)
 # linking
 # vcpkg
 target_link_libraries(Tutorial PRIVATE glfw)
-target_link_libraries(Tutorial PRIVATE ${OPENGL_gl_LIBRARY})
+target_link_libraries(Tutorial PRIVATE GLEW::GLEW)
+#target_link_libraries(Tutorial PRIVATE ${OPENGL_gl_LIBRARY})
+
+
+
+
+
 
 
