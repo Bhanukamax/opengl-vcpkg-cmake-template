@@ -11,7 +11,7 @@ project(Tutorial VERSION 1.0)
 # these are from vcpkg
 find_package(glfw3 CONFIG REQUIRED)
 #find_package(OpenGL REQUIRED)
-find_package(GLEW REQUIRED)
+find_package(GLEW CONFIG REQUIRED)
 
 # add the executable
 add_executable(Tutorial src/test.cpp)
